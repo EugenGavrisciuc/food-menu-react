@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/food-menu-react/static/css/main.eb128ba2.css",
+    "main.js": "/food-menu-react/static/js/main.ee90ae99.js",
+    "static/media/food-bg.jpg": "/food-menu-react/static/media/food-bg.fd26761e91858028ef58.jpg",
+    "static/media/error.png": "/food-menu-react/static/media/error.286aeb2c2a61f5a5523e.png",
+    "static/media/icn_salad2.svg": "/food-menu-react/static/media/icn_salad2.dd353c8a9382d9c33f3a8942299474ff.svg",
+    "static/media/icn_pizza.svg": "/food-menu-react/static/media/icn_pizza.cc6b051ae5af800cdd60ec3467b0d839.svg",
+    "static/media/icn_meat.svg": "/food-menu-react/static/media/icn_meat.3e64819d4e3d8f3cfe2ea19f1f5a12cc.svg",
+    "static/media/shopping-cart-solid-hover.svg": "/food-menu-react/static/media/shopping-cart-solid-hover.a89debecb6c4e1dfdef4bbbdd938251b.svg",
+    "static/media/shopping-cart-solid.svg": "/food-menu-react/static/media/shopping-cart-solid.f0d47d21b1dd7b835cb6abacb57c3d49.svg",
+    "index.html": "/food-menu-react/index.html",
+    "main.eb128ba2.css.map": "/food-menu-react/static/css/main.eb128ba2.css.map",
+    "main.ee90ae99.js.map": "/food-menu-react/static/js/main.ee90ae99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb128ba2.css",
+    "static/js/main.ee90ae99.js"
+  ]
+}
