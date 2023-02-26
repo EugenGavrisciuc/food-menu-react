@@ -1,5 +1,5 @@
 export default class RestoService {
-    _apiBase = "https://food-menu-react.herokuapp.com/api";
+    _apiBase = "https://my-json-server.typicode.com/EugenGavrisciuc/menufoodapi";
 
     async getResource(url) {
         const res = await fetch(`${this._apiBase}${url}`);
