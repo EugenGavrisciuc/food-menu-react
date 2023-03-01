@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {AddToCard, LocationValueSend, DataAboutElement, ModalWindowStatusUpdate} from "../../actions"
@@ -8,12 +8,15 @@ const ItemDetails = ({elemData, AddToCard, LocationValueSend, location_val, Moda
     const hist = useNavigate();
     const paramsId = useParams();
     const loc_present = useLocation();
-    if(paramsId.id) {document.body.style.overflow = "hidden"}
+    if(paramsId.id) {document.body.style.overflow = "hidden"};
 
-    if(loc_present.pathname !== location_val){
-        LocationValueSend(loc_present.pathname);
-            
-    }
+    useEffect(() => {
+        if(loc_present.pathname !== location_val){
+            LocationValueSend(loc_present.pathname);
+                
+        }
+    },[loc_present.pathname]);
+
 
     const {title, price, url, category, id} = elemData;
         return (

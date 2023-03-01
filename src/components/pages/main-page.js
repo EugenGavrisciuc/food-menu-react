@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MenuList from '../menu-list';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,18 +12,19 @@ const MainPage = () => {
     // if(locval === "/" || loc.pathname === "/") {
     //     dispatch(GoToMenu());
     // };
-
-    if(locval === "/salads" || loc.pathname === "/salads") {
-        dispatch(ModifyAllToSalads());
-    };
-
-    if(locval === "/meats" || loc.pathname === "/meats") {
-        dispatch(ModifyAllToMeats());
-    };
-
-    if(locval === "/pizzas" || loc.pathname === "/pizzas") {
-        dispatch(ModifyAllToPizzas());
-    };
+    useEffect(() => {
+        if(locval === "/salads" || loc.pathname === "/food-menu-react/salads") {
+            dispatch(ModifyAllToSalads());
+        };
+    
+        if(locval === "/meats" || loc.pathname === "/food-menu-react/meats") {
+            dispatch(ModifyAllToMeats());
+        };
+    
+        if(locval === "/pizzas" || loc.pathname === "/food-menu-react/pizzas") {
+            dispatch(ModifyAllToPizzas());
+        };
+    },[locval, loc.pathname])
 
 
     return (

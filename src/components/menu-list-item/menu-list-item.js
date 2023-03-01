@@ -12,6 +12,16 @@ import icn_meat from "../app/menu_icons/icn_meat.svg";
 // import icn_salad from "../app/menu_icons/icn_salad.svg";
 import icn_salad2 from "../app/menu_icons/icn_salad2.svg";
 
+//Deleting styles from <Link/>
+const StyledLink = styled(Link)`
+text-decoration: none;
+
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+    color: black;
+}`; 
+
+
 const MenuListItem = ({menuItem}) => {
 
     const menu = useContext(TransferMenuLinkName);
@@ -49,21 +59,13 @@ const MenuListItem = ({menuItem}) => {
         }
     }
 
-    //Deleting styles from <Link/>
-    const StyledLink = styled(Link)`
-    text-decoration: none;
-
-    &:focus, &:hover, &:visited, &:link, &:active {
-        text-decoration: none;
-        color: black;
-    }`;
-
     const {id, title, price, url, category} = menuItem;
 
     return (
         <>
             <li className="menu__item hoverEffect">
-        <StyledLink to={`/${menu}/${title.toLowerCase().replace(/ /g,"")}`} onClick={() => SendDataAboutElem(menuItem)}>
+        <StyledLink to={`/food-menu-react/${menu}/${title.toLowerCase().replace(/ /g,"")}`}
+                    onClick={() => SendDataAboutElem(menuItem)}>
                 <div className="menu__title">{title}</div>
                     <img className="menu__img" src={url} alt={title}></img>
         </StyledLink>

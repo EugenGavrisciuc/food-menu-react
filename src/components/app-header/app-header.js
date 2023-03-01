@@ -44,21 +44,21 @@ const AppHeader = () => {
 
     return (
         <header className="header">
-            <Link className={`header__link ${(link_status === "menu") ? "header__selected" : null }`} to="/" onClick={() => GoToMainMenu()}>
+            <Link className={`header__link ${(link_status === "menu") ? "header__selected" : null }`} to="/food-menu-react" onClick={() => GoToMainMenu()}>
                 Menu
             </Link>
-            <Link className={`header__link ${(link_status === "salads") ? "header__selected" : null }`} to="salads" onClick={() => SendLocVal("/salads")}>
+            <Link className={`header__link ${(link_status === "salads") ? "header__selected" : null }`} to="/food-menu-react/salads" onClick={() => SendLocVal("/salads")}>
                 Salads
             </Link>
-            <Link className={`header__link ${(link_status === "meats") ? "header__selected" : null }`} to="meats" onClick={() => SendLocVal("/meats")}>
+            <Link className={`header__link ${(link_status === "meats") ? "header__selected" : null }`} to="/food-menu-react/meats" onClick={() => SendLocVal("/meats")}>
                 Meats
             </Link>
-            <Link className={`header__link ${(link_status === "pizzas") ? "header__selected" : null }`} to="pizzas" onClick={() => SendLocVal("/pizzas")}>
+            <Link className={`header__link ${(link_status === "pizzas") ? "header__selected" : null }`} to="/food-menu-react/pizzas" onClick={() => SendLocVal("/pizzas")}>
                 Pizzas
             </Link>
             <Link
                 className={`header__link ${(link_status === "cart") ? "header__selected" : null }`}
-                to="cart"
+                to="/food-menu-react/cart"
                 onClick={() => SendCartLink()}
                 onMouseOver={() => setIconState(cartIconHover)}
                 onMouseLeave={() => setIconState(cartIcon)}
